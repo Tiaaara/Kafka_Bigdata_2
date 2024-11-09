@@ -171,7 +171,7 @@ Dapatkan ringkasan dari model tertentu, termasuk pusat cluster! 📊
 
 Kafka Producer akan mengalirkan data dari dataset baris demi baris ke topic `retail_stream` di Kafka.
 
-- **Jalankan Producer**: 
+**Jalankan Producer**: 
    ```bash
    python kafka_producer.py
    ```
@@ -180,14 +180,15 @@ Kafka Producer akan mengalirkan data dari dataset baris demi baris ke topic `ret
 
 Kafka Consumer ini akan membaca data dari Kafka topic `retail_stream`, membentuk batch, dan menyimpannya ke folder `batch`.
 
-- **Jalankan Consumer**: 
+**Jalankan Consumer**: 
    ```bash
    python kafka_consumer.py
    ```
 
 ### 4. Melatih Model KMeans dengan Spark
+File spark ini akan membaca file batch dari folder batch, melatih model KMeans, dan menyimpannya ke folder models.
 
-- **Jalankan Training**: 
+**Jalankan Training**: 
    ```bash
    spark-submit spark_kmeans_training.py
    ```
