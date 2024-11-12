@@ -2,10 +2,10 @@
 # 📊 Big Data Streaming with Kafka and Spark for Retail Clustering 📊
 
 Relevansi dataset yang digunakan : https://www.kaggle.com/datasets/ishanshrivastava28/tata-online-retail-dataset<br>
-Relevansi Online Retail Dataset dengan tugas Anda mengenai pemrosesan data streaming menggunakan Kafka dan Apache Spark sangat erat, karena dataset ini mendukung alur kerja sistem Big Data Anda. Berikut penjelasannya:
-**1. Simulasi Data Streaming**: Dataset ini berisi transaksi yang dapat diperlakukan sebagai data aliran, yang akan dikirimkan oleh Kafka Producer ke Kafka Server secara sekuensial.
-**2. Batching dengan Kafka Consumer**: Data transaksi bisa dikelompokkan (batching) oleh Kafka Consumer berdasarkan jumlah atau waktu. Batch ini akan diproses lebih lanjut oleh Spark.
-**3. Pelatihan Model Clustering dengan Spark**: Data yang diterima digunakan untuk melatih model clustering (misalnya, KMeans) untuk mengelompokkan produk atau pelanggan berdasarkan pola pembelian.
+Relevansi Online Retail Dataset dengan tugas Anda mengenai pemrosesan data streaming menggunakan Kafka dan Apache Spark sangat erat, karena dataset ini mendukung alur kerja sistem Big Data Anda. Berikut penjelasannya:<br>
+**1. Simulasi Data Streaming**: Dataset ini berisi transaksi yang dapat diperlakukan sebagai data aliran, yang akan dikirimkan oleh Kafka Producer ke Kafka Server secara sekuensial.<br>
+**2. Batching dengan Kafka Consumer**: Data transaksi bisa dikelompokkan (batching) oleh Kafka Consumer berdasarkan jumlah atau waktu. Batch ini akan diproses lebih lanjut oleh Spark.<br>
+**3. Pelatihan Model Clustering dengan Spark**: Data yang diterima digunakan untuk melatih model clustering (misalnya, KMeans) untuk mengelompokkan produk atau pelanggan berdasarkan pola pembelian.<br>
 **4. API untuk Prediksi dan Rekomendasi**: Setelah model dilatih, API dapat digunakan untuk memberikan prediksi cluster atau rekomendasi produk kepada pengguna berdasarkan data yang diberikan.
 
 
