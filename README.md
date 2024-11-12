@@ -186,10 +186,3 @@ curl -X POST http://localhost:5000/cluster-country -H "Content-Type: application
 "model_number":"3"}
 ```
     
-## 🎉 Kesimpulan
-Proyek ini memberikan gambaran lengkap tentang Big Data Streaming menggunakan Kafka dan Spark. Dengan pipeline ini, kita dapat mengalirkan data secara terus-menerus, memproses batch data, melakukan clustering, dan menyediakan API untuk prediksi secara real-time! 🌟
-
-## 🛠 Troubleshooting
-- **Model Tidak Ditemukan**: Pastikan model Anda tersimpan di folder `models` dengan nama seperti `kmeans_model_1`, `kmeans_model_2`, dll.
-- **Pengaturan Kafka**: Pastikan Kafka berjalan dan data dikirim dengan benar untuk pemrosesan batch.
-- **Path File**: Sesuaikan path file jika menggunakan struktur direktori yang berbeda.
