@@ -68,16 +68,6 @@ bin/kafka-server-start.sh config/server.properties
     bin/kafka-topics.sh --create --topic retail_stream --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 ```
 
-### 5. Pastikan Struktur Folder
-- Pastikan struktur direktori seperti di atas sudah ada. Jika folder batch dan models belum ada, buatlah:
-```
-mkdir batch
-```
-
-```
-mkdir models
-```
-
 ## 🚀 Penjelasan Program
 1. Producer ``(producer.py)``
 Producer ini bertugas membaca data dari file Online_Retail_Dataset.csv dan mengirimkannya satu per satu ke Kafka topic retail_stream. Setiap pengiriman diberi jeda acak untuk mensimulasikan aliran data real-time.<br>
