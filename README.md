@@ -15,7 +15,6 @@ Relevansi Online Retail Dataset dengan tugas Anda mengenai pemrosesan data strea
 - [📦 Langkah-Langkah Instalasi dan Pengaturan](#📦-langkah-langkah-instalasi-dan-pengaturan)
 - [🚀 Penjelasan Program](#🚀-penjelasan-program)
 - [🔍 Pengujian Program](#🔍-pengujian-program)
-- [🔢 Klasifikasi Data Input ke dalam cluster](#klasifikasi-data-input-ke-dalam-cluster)
 - [🌐 Endpoint API untuk Prediksi Clustering](#🌐-endpoint-api-untuk-prediksi-clustering)
 - [🎉 Kesimpulan](#🎉-kesimpulan)
 - [🛠 Troubleshooting](#🛠-troubleshooting)
@@ -186,34 +185,6 @@ curl -X POST http://localhost:5000/cluster-country -H "Content-Type: application
 "cluster":0,
 "cluster_description":"Low-Spending Countries - Regions with minimal spending. Target with introductory discounts or free shipping to increase engagement.",
 "model_number":"3"}
-```
-
-## 🌐 Endpoint API untuk Prediksi Clustering
-Berikut adalah contoh penggunaan endpoint dengan perintah curl:
-
-
-#### 2. Prediksi Product Cluster
-```
-    curl -X POST http://localhost:5000/cluster-product \
--H "Content-Type: application/json" \
--d '{
-    "model_number": "1", 
-    "StockCode": "85123A", 
-    "Quantity": 10, 
-    "UnitPrice": 5.0
-}'
-```
-
-#### 3. Prediksi Country Cluster
-```
-    curl -X POST http://localhost:5000/cluster-country \
--H "Content-Type: application/json" \
--d '{
-    "model_number": "1", 
-    "Country": "United Kingdom", 
-    "Quantity": 10, 
-    "UnitPrice": 5.0
-}'
 ```
     
 ## 🎉 Kesimpulan
