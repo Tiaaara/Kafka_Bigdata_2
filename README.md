@@ -121,7 +121,7 @@ python app.py
 
 
 ## 🌐 Endpoint API untuk Prediksi Clustering
-Berikut adalah contoh penggunaan endpoint dengan perintah curl:
+Berikut adalah contoh penggunaan endpoint dengan perintah curl:<br>
 **1. Prediksi Customer Cluster**
 **Input :**
 ```
@@ -143,8 +143,8 @@ curl -X POST http://localhost:5000/cluster-customer -H "Content-Type: applicatio
 "model_number":"1"
 }
 ```
-
-**2. Prediksi Product Cluster**
+<br>
+**2. Prediksi Product Cluster**<br>
 **Input :**
 ```
 curl -X POST http://localhost:5000/cluster-product -H "Content-Type: application/json" -d '{
@@ -165,8 +165,8 @@ curl -X POST http://localhost:5000/cluster-product -H "Content-Type: application
 "model_number":"1"
 }
 ```
-
-**3. Prediksi Country Cluster**
+<br>
+**3. Prediksi Country Cluster**<br>
 **Input :**
 ```
 curl -X POST http://localhost:5000/cluster-country -H "Content-Type: application/json" -d '{
