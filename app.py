@@ -35,23 +35,23 @@ for model_file in os.listdir(model_dir):
         models[f"country_{model_number}"] = KMeansModel.load(model_path)
         print(f"Loaded country model {model_number}")
 
-# Define cluster descriptions
+# Define expanded cluster descriptions
 customer_cluster_descriptions = {
-    0: "Low-Quantity Buyers",
-    1: "Medium-Quantity Buyers",
-    2: "High-Quantity Buyers"
+    0: "Low-Quantity Buyers - Customers who occasionally make small purchases. Targeted for introductory promotions or loyalty program enrollment.",
+    1: "Medium-Quantity Buyers - Customers with moderate purchase frequency. Ideal for seasonal discounts and loyalty programs to increase engagement.",
+    2: "High-Quantity Buyers - Frequent buyers with high volumes. Target with premium memberships, exclusive offers, and tailored recommendations."
 }
 
 product_cluster_descriptions = {
-    0: "Low-Demand Products",
-    1: "Moderate-Demand Products",
-    2: "High-Demand Products"
+    0: "Low-Demand Products - Items with limited popularity. Suitable for bundling promotions or clearance sales to reduce inventory.",
+    1: "Moderate-Demand Products - Products with steady demand, effective for standard marketing strategies.",
+    2: "High-Demand Products - Highly popular items with fast turnover. Ideal for cross-selling, highlighting in top-seller lists, and exclusive promotions."
 }
 
 country_cluster_descriptions = {
-    0: "Low-Spending Countries",
-    1: "Moderate-Spending Countries",
-    2: "High-Spending Countries"
+    0: "Low-Spending Countries - Regions with minimal spending. Target with introductory discounts or free shipping to increase engagement.",
+    1: "Moderate-Spending Countries - Average spenders. Seasonal campaigns and loyalty programs can be effective here.",
+    2: "High-Spending Countries - High-revenue regions. Consider premium or exclusive offers, localized marketing, and special promotions."
 }
 
 # Endpoint for clustering customers
