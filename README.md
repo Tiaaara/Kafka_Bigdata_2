@@ -1,6 +1,14 @@
 
 # 📊 Big Data Streaming with Kafka and Spark for Retail Clustering 📊
 
+Relevansi dataset yang digunakan : https://www.kaggle.com/datasets/ishanshrivastava28/tata-online-retail-dataset
+Relevansi Online Retail Dataset dengan tugas Anda mengenai pemrosesan data streaming menggunakan Kafka dan Apache Spark sangat erat, karena dataset ini mendukung alur kerja sistem Big Data Anda. Berikut penjelasannya:
+1. Simulasi Data Streaming: Dataset ini berisi transaksi yang dapat diperlakukan sebagai data aliran, yang akan dikirimkan oleh Kafka Producer ke Kafka Server secara sekuensial.
+2. Batching dengan Kafka Consumer: Data transaksi bisa dikelompokkan (batching) oleh Kafka Consumer berdasarkan jumlah atau waktu. Batch ini akan diproses lebih lanjut oleh Spark.
+3. Pelatihan Model Clustering dengan Spark: Data yang diterima digunakan untuk melatih model clustering (misalnya, KMeans) untuk mengelompokkan produk atau pelanggan berdasarkan pola pembelian.
+4. API untuk Prediksi dan Rekomendasi: Setelah model dilatih, API dapat digunakan untuk memberikan prediksi cluster atau rekomendasi produk kepada pengguna berdasarkan data yang diberikan.
+
+
 📋 Daftar Isi
 - [🛠 Prasyarat](#🛠-prasyarat)
 - [📂 Struktur Direktori](#📂-struktur-direktori)
@@ -116,7 +124,7 @@ python app.py
 
 ## 🔢 Klasifikasi Data Input ke dalam cluster
 **1. Prediksi Customer Cluster**
-**Request :**
+**Input :**
 ```
 {
     "model_number": "1",
@@ -125,19 +133,20 @@ python app.py
     "UnitPrice": 5.0
 }
 ```
-**Response:**
+**Output:**
 ```
 {
-    "model_number": "1",
     "CustomerID": 17850,
     "Quantity": 10,
     "UnitPrice": 5.0,
-    "cluster": 2
+    "cluster": 2,
+    "cluster_description": "Frequent High-Value Customers",
+    "model_number": "1"
 }
 ```
 
 **2. Prediksi Product Cluster**
-**Request :**
+**Input :**
 ```
 {
     "model_number": "1",
@@ -146,18 +155,21 @@ python app.py
     "UnitPrice": 5.0
 }
 ```
-**Response :**
+**Output :**
 ```
 {
-    "model_number": "1",
     "StockCode": "85123A",
     "Quantity": 10,
     "UnitPrice": 5.0,
-    "cluster": 1
+    "cluster": 3,
+    "cluster_description": "Popular and Frequently Purchased Products",
+    "model_number": "1"
 }
+
 ```
 
 **3. Prediksi Country Cluster**
+**Input :**
 ```
 {
     "model_number": "1",
@@ -166,15 +178,15 @@ python app.py
     "UnitPrice": 5.0
 }
 ```
-**Response :**
+**Output :**
 ```
 {
-    "model_number": "1",
-    "Country": "United Kingdom",
-    "Quantity": 10,
-    "UnitPrice": 5.0,
-    "cluster": 3
-}
+    "Country":"United Kingdom",
+    "Quantity":10,
+    "UnitPrice":5.0,
+    "cluster":1,
+    "cluster_description":"Moderate-Spending Countries",
+    "model_number":"1"}
 ```
 
 ## 🌐 Endpoint API untuk Prediksi Clustering
