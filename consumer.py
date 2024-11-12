@@ -14,7 +14,7 @@ consumer = KafkaConsumer(
 
 # Batching Parameters
 batch_size = 1000  # Number of records per batch
-time_window = 300  # Time window in seconds for each batch (e.g., 5 minutes)
+time_window = 1000  # Time window in seconds for each batch (e.g., 5 minutes)
 
 # Initialize variables for batching
 batch = []
