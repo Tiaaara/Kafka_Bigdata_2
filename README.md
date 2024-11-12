@@ -9,10 +9,11 @@ Selamat datang di proyek Big Data Streaming ini! 🎉 Dalam proyek ini, kita aka
 - [📦 Langkah-Langkah Instalasi dan Pengaturan](#📦-langkah-langkah-instalasi-dan-pengaturan)
 - [🚀 Penjelasan Program](#🚀-penjelasan-program)
 - [🔍 Pengujian Program](#🔍-pengujian-program)
-- [🔢 Klasifkasi Data Input ke dalam cluster](🔢-klasifikasi-data-input-ke-dalam-cluster)
+- [🔢 Klasifikasi Data Input ke dalam cluster](#klasifikasi-data-input-ke-dalam-cluster)
 - [🌐 Endpoint API untuk Prediksi Clustering](#🌐-endpoint-api-untuk-prediksi-clustering)
 - [🎉 Kesimpulan](#🎉-kesimpulan)
 - [🛠 Troubleshooting](#🛠-troubleshooting)
+
 
 
 ## 🛠 Prasyarat
@@ -121,7 +122,7 @@ python app.py
 5. Jalankan API: Terakhir, jalankan app.py untuk mengaktifkan endpoint prediksi.
 
 
-## Klasifkasi Data Input ke dalam cluster
+## 🔢 Klasifikasi Data Input ke dalam cluster
 **1. Prediksi Customer Cluster**
 **Request :**
 ```
