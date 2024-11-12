@@ -17,7 +17,6 @@ Dataset yang digunakan memberikan gambaran menyeluruh mengenai metrik kinerja bi
 - [🔍 Pengujian Program](#🔍-pengujian-program)
 - [🌐 Endpoint API untuk Prediksi Clustering](#🌐-endpoint-api-untuk-prediksi-clustering)
 - [🎉 Kesimpulan](#🎉-kesimpulan)
-- [🛠 Troubleshooting](#🛠-troubleshooting)
 
 
 ## 🛠 Syarat Sistem
