@@ -122,86 +122,75 @@ python app.py
 5. Jalankan API: Terakhir, jalankan app.py untuk mengaktifkan endpoint prediksi.
 
 
-## 🔢 Klasifikasi Data Input ke dalam cluster
+## 🌐 Endpoint API untuk Prediksi Clustering
+Berikut adalah contoh penggunaan endpoint dengan perintah curl:
 **1. Prediksi Customer Cluster**
 **Input :**
 ```
-{
+curl -X POST http://localhost:5000/cluster-customer -H "Content-Type: application/json" -d '{
     "model_number": "1",
     "CustomerID": 17850,
-    "Quantity": 10,
-    "UnitPrice": 5.0
-}
+    "Quantity": 100000,
+    "UnitPrice": 5000.0
+}'
 ```
 **Output:**
 ```
 {
-    "CustomerID": 17850,
-    "Quantity": 10,
-    "UnitPrice": 5.0,
-    "cluster": 2,
-    "cluster_description": "Frequent High-Value Customers",
-    "model_number": "1"
+"CustomerID":17850,
+"Quantity":100000,
+"UnitPrice":5000.0,
+"cluster":2,
+"cluster_description":"High-Quantity Buyers - Frequent buyers with high volumes. Target with premium memberships, exclusive offers, and tailored         recommendations.",
+"model_number":"1"
 }
 ```
 
 **2. Prediksi Product Cluster**
 **Input :**
 ```
-{
+curl -X POST http://localhost:5000/cluster-product -H "Content-Type: application/json" -d '{
     "model_number": "1",
     "StockCode": "85123A",
     "Quantity": 10,
     "UnitPrice": 5.0
-}
+}'
+
 ```
 **Output :**
 ```
 {
-    "StockCode": "85123A",
-    "Quantity": 10,
-    "UnitPrice": 5.0,
-    "cluster": 3,
-    "cluster_description": "Popular and Frequently Purchased Products",
-    "model_number": "1"
+"Quantity":10,
+"StockCode":"85123A",
+"UnitPrice":5.0,"cluster":1,
+"cluster_description":"Moderate-Demand Products - Products with steady demand, effective for standard marketing strategies.",
+"model_number":"1"
 }
-
 ```
 
 **3. Prediksi Country Cluster**
 **Input :**
 ```
-{
-    "model_number": "1",
+curl -X POST http://localhost:5000/cluster-country -H "Content-Type: application/json" -d '{
+    "model_number": "3",
     "Country": "United Kingdom",
-    "Quantity": 10,
-    "UnitPrice": 5.0
-}
+    "Quantity": 100,
+    "UnitPrice": 40.0
+}'
 ```
 **Output :**
 ```
 {
-    "Country":"United Kingdom",
-    "Quantity":10,
-    "UnitPrice":5.0,
-    "cluster":1,
-    "cluster_description":"Moderate-Spending Countries",
-    "model_number":"1"}
+"Country":"United Kingdom",
+"Quantity":100,"UnitPrice":40.0,
+"cluster":0,
+"cluster_description":"Low-Spending Countries - Regions with minimal spending. Target with introductory discounts or free shipping to increase engagement.",
+"model_number":"3"}
 ```
 
 ## 🌐 Endpoint API untuk Prediksi Clustering
 Berikut adalah contoh penggunaan endpoint dengan perintah curl:
-#### 1. Prediksi Customer Cluster
-```
-    curl -X POST http://localhost:5000/cluster-customer \
--H "Content-Type: application/json" \
--d '{
-    "model_number": "1", 
-    "CustomerID": 17850, 
-    "Quantity": 10, 
-    "UnitPrice": 5.0
-}'
-```
+
 
 #### 2. Prediksi Product Cluster
 ```
