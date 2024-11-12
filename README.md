@@ -1,8 +1,6 @@
 
 # 📊 Big Data Streaming with Kafka and Spark for Retail Clustering 📊
 
-Selamat datang di proyek Big Data Streaming ini! 🎉 Dalam proyek ini, kita akan membangun sistem yang melakukan streaming data retail menggunakan Kafka dan mengolahnya dengan Spark untuk melakukan clustering pada data customer, produk, dan negara. Di sini kita akan membangun pipeline lengkap dari producer ke consumer hingga model training dan API untuk prediksi.
-
 📋 Daftar Isi
 - [🛠 Prasyarat](#🛠-prasyarat)
 - [📂 Struktur Direktori](#📂-struktur-direktori)
