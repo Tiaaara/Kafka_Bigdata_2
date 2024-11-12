@@ -14,7 +14,7 @@ Selamat datang di proyek Big Data Streaming ini! 🎉 Dalam proyek ini, kita aka
 8. [Troubleshooting](#troubleshooting)
 
 
-## 🛠 1. Prasyarat
+## 🛠 Prasyarat
 Pastikan Anda memiliki perangkat berikut terinstal di sistem Anda:
 - Python (versi 3.7 ke atas)
 - Kafka (Apache Kafka, untuk streaming data)
@@ -30,7 +30,7 @@ pip install Flask pyspark
 
 **Catatan:** Anda bisa menginstal Kafka dan Spark melalui package manager atau mengikuti petunjuk di Kafka Documentation dan Spark Documentation.
     
-## 📂 2. Struktur Direktori
+## 📂 Struktur Direktori
 
     ├── batch                        # Menyimpan file batch dari Kafka Consumer. Setiap file mewakili sekumpulan data streaming
     ├── models                       # Berisi model KMeans yang dilatih menggunakan Spark
@@ -40,7 +40,7 @@ pip install Flask pyspark
     ├── consumer.py                  # Kafka Consumer untuk batching data
     └── kmeans_spark_training.py     # Program untuk melatih model KMeans
 
-## 📦 3. Langkah-Langkah Instalasi dan Pengaturan
+## 📦 Langkah-Langkah Instalasi dan Pengaturan
 #### 1. Clone Proyek ini 
 ```
 git clone https://github.com/Tiaaara/Kafka_Bigdata_2.git
@@ -78,7 +78,7 @@ mkdir batch
 mkdir models
 ```
 
-## 🚀 4. Penjelasan Program
+## 🚀 Penjelasan Program
 1. Producer ``(producer.py)``
 Producer ini bertugas membaca data dari file Online_Retail_Dataset.csv dan mengirimkannya satu per satu ke Kafka topic retail_stream. Setiap pengiriman diberi jeda acak untuk mensimulasikan aliran data real-time.
 **- Jalankan Producer:**
@@ -111,7 +111,7 @@ python app.py
 **Catatan:** API akan berjalan di http://localhost:5000.
 
 
-## 🔍 5. Pengujian Program
+## 🔍 Pengujian Program
 #### Langkah-Langkah Pengujian
 1. Jalankan Kafka: Pastikan Kafka berjalan dengan perintah di bagian sebelumnya.
 2. Jalankan Producer: Jalankan producer.py untuk mulai mengirim data ke Kafka.
@@ -121,7 +121,7 @@ python app.py
 
 
 ## Klasifkasi Data Input ke dalam cluster
-1. Prediksi Customer Cluster
+**1. Prediksi Customer Cluster**
 **Request :**
 ```
 {
@@ -142,7 +142,7 @@ python app.py
 }
 ```
 
-2. Prediksi Product Cluster
+**2. Prediksi Product Cluster**
 **Request :**
 ```
 {
@@ -163,7 +163,7 @@ python app.py
 }
 ```
 
-3. Prediksi Country Cluster
+**3. Prediksi Country Cluster**
 ```
 {
     "model_number": "1",
@@ -183,7 +183,7 @@ python app.py
 }
 ```
 
-## 🌐 6. Endpoint API untuk Prediksi Clustering
+## 🌐 Endpoint API untuk Prediksi Clustering
 Berikut adalah contoh penggunaan endpoint dengan perintah curl:
 #### 1. Prediksi Customer Cluster
 ```
@@ -221,10 +221,10 @@ Berikut adalah contoh penggunaan endpoint dengan perintah curl:
 }'
 ```
     
-## 🎉 7. Kesimpulan
+## 🎉 Kesimpulan
 Proyek ini memberikan gambaran lengkap tentang Big Data Streaming menggunakan Kafka dan Spark. Dengan pipeline ini, kita dapat mengalirkan data secara terus-menerus, memproses batch data, melakukan clustering, dan menyediakan API untuk prediksi secara real-time! 🌟
 
-## 🛠 8. Troubleshooting
+## 🛠 Troubleshooting
 - **Model Tidak Ditemukan**: Pastikan model Anda tersimpan di folder `models` dengan nama seperti `kmeans_model_1`, `kmeans_model_2`, dll.
 - **Pengaturan Kafka**: Pastikan Kafka berjalan dan data dikirim dengan benar untuk pemrosesan batch.
 - **Path File**: Sesuaikan path file jika menggunakan struktur direktori yang berbeda.
