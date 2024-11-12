@@ -3,10 +3,10 @@
 
 Relevansi dataset yang digunakan : https://www.kaggle.com/datasets/ishanshrivastava28/tata-online-retail-dataset<br>
 Relevansi Online Retail Dataset dengan tugas Anda mengenai pemrosesan data streaming menggunakan Kafka dan Apache Spark sangat erat, karena dataset ini mendukung alur kerja sistem Big Data Anda. Berikut penjelasannya:
-1. Simulasi Data Streaming: Dataset ini berisi transaksi yang dapat diperlakukan sebagai data aliran, yang akan dikirimkan oleh Kafka Producer ke Kafka Server secara sekuensial.
-2. Batching dengan Kafka Consumer: Data transaksi bisa dikelompokkan (batching) oleh Kafka Consumer berdasarkan jumlah atau waktu. Batch ini akan diproses lebih lanjut oleh Spark.
-3. Pelatihan Model Clustering dengan Spark: Data yang diterima digunakan untuk melatih model clustering (misalnya, KMeans) untuk mengelompokkan produk atau pelanggan berdasarkan pola pembelian.
-4. API untuk Prediksi dan Rekomendasi: Setelah model dilatih, API dapat digunakan untuk memberikan prediksi cluster atau rekomendasi produk kepada pengguna berdasarkan data yang diberikan.
+**1. Simulasi Data Streaming**: Dataset ini berisi transaksi yang dapat diperlakukan sebagai data aliran, yang akan dikirimkan oleh Kafka Producer ke Kafka Server secara sekuensial.
+**2. Batching dengan Kafka Consumer**: Data transaksi bisa dikelompokkan (batching) oleh Kafka Consumer berdasarkan jumlah atau waktu. Batch ini akan diproses lebih lanjut oleh Spark.
+**3. Pelatihan Model Clustering dengan Spark**: Data yang diterima digunakan untuk melatih model clustering (misalnya, KMeans) untuk mengelompokkan produk atau pelanggan berdasarkan pola pembelian.
+**4. API untuk Prediksi dan Rekomendasi**: Setelah model dilatih, API dapat digunakan untuk memberikan prediksi cluster atau rekomendasi produk kepada pengguna berdasarkan data yang diberikan.
 
 
 📋 Daftar Isi
@@ -18,7 +18,6 @@ Relevansi Online Retail Dataset dengan tugas Anda mengenai pemrosesan data strea
 - [🌐 Endpoint API untuk Prediksi Clustering](#🌐-endpoint-api-untuk-prediksi-clustering)
 - [🎉 Kesimpulan](#🎉-kesimpulan)
 - [🛠 Troubleshooting](#🛠-troubleshooting)
-
 
 
 ## 🛠 Prasyarat
@@ -85,7 +84,7 @@ python producer.py
 ```
 **Note:** Pastikan dataset Online_Retail_Dataset.csv berada di direktori yang sama dengan producer.py. Producer akan menampilkan data yang dikirim ke Kafka di terminal.
 
-2. Consumer (consumer.py)
+2. Consumer ``(consumer.py)``
 Consumer menerima data dari Kafka, mengelompokkan data dalam batch berdasarkan ukuran batch atau waktu, lalu menyimpannya sebagai file CSV di folder batch. Setiap file CSV yang dihasilkan berisi sekumpulan data yang telah dikelompokkan dalam batch.<br>
 
 **Jalankan Consumer:**
@@ -94,7 +93,7 @@ python consumer.py
 ```
 **Notes :** Konsumer akan menampilkan pesan setiap kali batch baru disimpan. File batch akan diberi nama berdasarkan nomor batch dan timestamp.
    
-3. Model Training (kmeans_spark_training.py)
+3. Model Training ``(kmeans_spark_training.py)``
 Program ini memanfaatkan Spark untuk melatih model clustering KMeans berdasarkan batch data yang telah tersimpan di folder batch. Model yang telah dilatih disimpan di folder models untuk digunakan dalam prediksi.<br>
 
 **Jalankan Model Training:**
@@ -102,7 +101,7 @@ Program ini memanfaatkan Spark untuk melatih model clustering KMeans berdasarkan
 python kmeans_spark_training.py
 ```
 
-4. API untuk Prediksi (app.py)
+4. API untuk Prediksi ``(app.py)``
 API ini memungkinkan pengguna mengirim data customer, produk, atau negara untuk mendapatkan prediksi cluster. API akan mengembalikan cluster yang paling sesuai berdasarkan model yang telah dilatih.<br>
 
 **Jalankan API:**
@@ -115,10 +114,10 @@ python app.py
 ## 🔍 Pengujian Program
 #### Langkah-Langkah Pengujian
 1. Jalankan Kafka: Pastikan Kafka berjalan dengan perintah di bagian sebelumnya.
-2. Jalankan Producer: Jalankan producer.py untuk mulai mengirim data ke Kafka.
-3. Jalankan Consumer: Jalankan consumer.py untuk menerima data dan menyimpan batch di folder batch.
+2. Jalankan Producer: Jalankan ``producer.py`` untuk mulai mengirim data ke Kafka.
+3. Jalankan Consumer: Jalankan ``consumer.py`` untuk menerima data dan menyimpan batch di folder batch.
 4. Jalankan Model Training: Setelah beberapa batch terkumpul, jalankan kmeans_spark_training.py untuk melatih model.
-5. Jalankan API: Terakhir, jalankan app.py untuk mengaktifkan endpoint prediksi.
+5. Jalankan API: Terakhir, jalankan ``app.py`` untuk mengaktifkan endpoint prediksi.
 
 
 ## 🌐 Endpoint API untuk Prediksi Clustering
@@ -140,7 +139,7 @@ curl -X POST http://localhost:5000/cluster-customer -H "Content-Type: applicatio
 "Quantity":100000,
 "UnitPrice":5000.0,
 "cluster":2,
-"cluster_description":"High-Quantity Buyers - Frequent buyers with high volumes. Target with premium memberships, exclusive offers, and tailored         recommendations.",
+"cluster_description":"High-Quantity Buyers - Frequent buyers with high volumes. Target with premium memberships, exclusive offers, and tailored recommendations.",
 "model_number":"1"
 }
 ```
