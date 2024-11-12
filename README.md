@@ -82,7 +82,7 @@ mkdir models
 
 ## 🚀 Penjelasan Program
 1. Producer ``(producer.py)``
-Producer ini bertugas membaca data dari file Online_Retail_Dataset.csv dan mengirimkannya satu per satu ke Kafka topic retail_stream. Setiap pengiriman diberi jeda acak untuk mensimulasikan aliran data real-time.
+Producer ini bertugas membaca data dari file Online_Retail_Dataset.csv dan mengirimkannya satu per satu ke Kafka topic retail_stream. Setiap pengiriman diberi jeda acak untuk mensimulasikan aliran data real-time.<br>
 **- Jalankan Producer:**
 ```
 python producer.py
@@ -90,7 +90,7 @@ python producer.py
 **Note:** Pastikan dataset Online_Retail_Dataset.csv berada di direktori yang sama dengan producer.py. Producer akan menampilkan data yang dikirim ke Kafka di terminal.
 
 2. Consumer (consumer.py)
-Consumer menerima data dari Kafka, mengelompokkan data dalam batch berdasarkan ukuran batch atau waktu, lalu menyimpannya sebagai file CSV di folder batch. Setiap file CSV yang dihasilkan berisi sekumpulan data yang telah dikelompokkan dalam batch.
+Consumer menerima data dari Kafka, mengelompokkan data dalam batch berdasarkan ukuran batch atau waktu, lalu menyimpannya sebagai file CSV di folder batch. Setiap file CSV yang dihasilkan berisi sekumpulan data yang telah dikelompokkan dalam batch.<br>
 **Jalankan Consumer:**
 ```
 python consumer.py
@@ -98,14 +98,14 @@ python consumer.py
 **Notes :** Konsumer akan menampilkan pesan setiap kali batch baru disimpan. File batch akan diberi nama berdasarkan nomor batch dan timestamp.
    
 3. Model Training (kmeans_spark_training.py)
-Program ini memanfaatkan Spark untuk melatih model clustering KMeans berdasarkan batch data yang telah tersimpan di folder batch. Model yang telah dilatih disimpan di folder models untuk digunakan dalam prediksi.
+Program ini memanfaatkan Spark untuk melatih model clustering KMeans berdasarkan batch data yang telah tersimpan di folder batch. Model yang telah dilatih disimpan di folder models untuk digunakan dalam prediksi.<br>
 **Jalankan Model Training:**
 ```
 python kmeans_spark_training.py
 ```
 
 4. API untuk Prediksi (app.py)
-API ini memungkinkan pengguna mengirim data customer, produk, atau negara untuk mendapatkan prediksi cluster. API akan mengembalikan cluster yang paling sesuai berdasarkan model yang telah dilatih.
+API ini memungkinkan pengguna mengirim data customer, produk, atau negara untuk mendapatkan prediksi cluster. API akan mengembalikan cluster yang paling sesuai berdasarkan model yang telah dilatih.<br>
 **Jalankan API:**
 ```
 python app.py
