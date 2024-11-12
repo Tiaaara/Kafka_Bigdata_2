@@ -91,7 +91,7 @@ Consumer menerima data dari Kafka, mengelompokkan data dalam batch berdasarkan u
 ```
 python consumer.py
 ```
-**Notes :** Konsumer akan menampilkan pesan setiap kali batch baru disimpan. File batch akan diberi nama berdasarkan nomor batch dan timestamp.
+**Note :** Konsumer akan menampilkan pesan setiap kali batch baru disimpan. File batch akan diberi nama berdasarkan nomor batch dan timestamp.
    
 **3. Model Training ``(kmeans_spark_training.py)``**<br>
 Program ini memanfaatkan Spark untuk melatih model clustering KMeans berdasarkan batch data yang telah tersimpan di folder batch. Model yang telah dilatih disimpan di folder models untuk digunakan dalam prediksi.<br>
@@ -108,7 +108,7 @@ API ini memungkinkan pengguna mengirim data customer, produk, atau negara untuk 
 ```
 python app.py
 ```
-**Catatan:** API akan berjalan di http://localhost:5000.
+**Note:** API akan berjalan di http://localhost:5000.
 
 
 ## 🔍 Pengujian Program
