@@ -20,8 +20,7 @@ Dataset yang digunakan memberikan gambaran menyeluruh mengenai metrik kinerja bi
 - [🛠 Troubleshooting](#🛠-troubleshooting)
 
 
-## 🛠 Prasyarat
-Pastikan Anda memiliki perangkat berikut terinstal di sistem Anda:
+## 🛠 Syarat Sistem
 - Python (versi 3.7 ke atas)
 - Kafka (Apache Kafka, untuk streaming data)
 - Apache Spark (untuk melakukan clustering)
@@ -29,10 +28,6 @@ Pastikan Anda memiliki perangkat berikut terinstal di sistem Anda:
 - Kafka-Python library
 - PySpark library
 
-**Instalasi requirements:**
-```
-pip install Flask pyspark
-```
 
 **Catatan:** Anda bisa menginstal Kafka dan Spark melalui package manager atau mengikuti petunjuk di Kafka Documentation dan Spark Documentation.
     
