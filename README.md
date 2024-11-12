@@ -4,15 +4,15 @@
 Selamat datang di proyek Big Data Streaming ini! 🎉 Dalam proyek ini, kita akan membangun sistem yang melakukan streaming data retail menggunakan Kafka dan mengolahnya dengan Spark untuk melakukan clustering pada data customer, produk, dan negara. Di sini kita akan membangun pipeline lengkap dari producer ke consumer hingga model training dan API untuk prediksi.
 
 📋 Daftar Isi
-[🛠 Prasyarat](#🛠-prasyarat)
-[📂 Struktur Direktori](#📂-struktur-direktori)
-[📦 Langkah-Langkah Instalasi dan Pengaturan](#📦-langkah-langkah-instalasi-dan-pengaturan)
-[🚀 Penjelasan Program](#🚀-penjelasan-program)
-[🔍 Pengujian Program](#🔍-pengujian-program)
-[🔢 Klasifkasi Data Input ke dalam cluster](🔢-klasifikasi-data-input-ke-dalam-cluster)
-[🌐 Endpoint API untuk Prediksi Clustering](#🌐-endpoint-api-untuk-prediksi-clustering)
-[🎉 Kesimpulan](#🎉-kesimpulan)
-[🛠 Troubleshooting](#🛠-troubleshooting)
+- [🛠 Prasyarat](#🛠-prasyarat)
+- [📂 Struktur Direktori](#📂-struktur-direktori)
+- [📦 Langkah-Langkah Instalasi dan Pengaturan](#📦-langkah-langkah-instalasi-dan-pengaturan)
+- [🚀 Penjelasan Program](#🚀-penjelasan-program)
+- [🔍 Pengujian Program](#🔍-pengujian-program)
+- [🔢 Klasifkasi Data Input ke dalam cluster](🔢-klasifikasi-data-input-ke-dalam-cluster)
+- [🌐 Endpoint API untuk Prediksi Clustering](#🌐-endpoint-api-untuk-prediksi-clustering)
+- [🎉 Kesimpulan](#🎉-kesimpulan)
+- [🛠 Troubleshooting](#🛠-troubleshooting)
 
 
 ## 🛠 Prasyarat
