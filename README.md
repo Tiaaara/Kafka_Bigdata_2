@@ -28,8 +28,6 @@ Dataset yang digunakan memberikan gambaran menyeluruh mengenai metrik kinerja bi
 - Kafka-Python library
 - PySpark library
 
-
-**Catatan:** Anda bisa menginstal Kafka dan Spark melalui package manager atau mengikuti petunjuk di Kafka Documentation dan Spark Documentation.
     
 ## 📂 Struktur Direktori
 
@@ -42,7 +40,7 @@ Dataset yang digunakan memberikan gambaran menyeluruh mengenai metrik kinerja bi
     └── kmeans_spark_training.py     # Program untuk melatih model KMeans
 
 ## 📦 Langkah-Langkah Instalasi dan Pengaturan
-#### 1. Clone Proyek ini 
+#### 1. Clone 
 ```
 git clone https://github.com/Tiaaara/Kafka_Bigdata_2.git
 cd your-repo
